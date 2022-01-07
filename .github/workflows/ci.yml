@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: 
+     - development
+     - master
+  pull_request:
+
+
+jobs:
+
+  api-ci: 
+    name: Testing CI
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 17
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Execute Unit tests
+        run: |
+          npm run test:ci
+
+      - name: Execute tests
+        run: |
+          npm run test
+          
