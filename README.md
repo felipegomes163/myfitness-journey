@@ -13,3 +13,5 @@ Para a construção de uma versão de produção do projeto utilizando a ferrame
 # Changelogs
 
 O arquivo **CHANGELOG.md** contém todas as grandes atualizações do projeto realizadas a partir da data 09/12/2021.
+
+# Copyright
